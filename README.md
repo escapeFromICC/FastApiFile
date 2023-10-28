@@ -5,31 +5,31 @@ git config --global user.name escapeFromICC
 git config --global user.email xxx
 
 # FastApiFile
-create virtual enviroment:
+## create virtual enviroment:
 -- python -m venv tutorial-env
 
-activate:
+## activate:
 -- source tutorial-env/bin/activate
 
-install server:
+## install server:
 -- pip install uvicorn
 
-install fastapi:
+## install fastapi:
 -- pip install fastapi
 
-run terminal:
+## run terminal:
 -- uvicorn main:app --reload
 
-check api:
+## check api:
 -- http://localhost:8000/docs
 
-// get method:
-1. path parameters:
+## get method:
+- 1. path parameters:
 @app.get('/blog/{id}')
 def index(id:int):
     return ("message": f"Blog with id {id}")
 
-2. predefined values: Predefined values with Enum
+- 2. predefined values: Predefined values with Enum
 predefined values with Enum
 class BlogType(str, Enum):
     short = 'short'
@@ -40,7 +40,7 @@ class BlogType(str, Enum):
 def blog_type(type:BlogType):
     return ("message": f"Blog type {type}")
 
-3. query parameters:
+- 3. query parameters:
 Any function parameters not part of the path
 @app.get('/blog/all')
 def get_blogs(page, page_size):
