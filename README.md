@@ -2,7 +2,7 @@ git add .
 git commit -m 
 
 git config --global user.name escapeFromICC
-git config --global user.email zhangyinping99@gmail.com
+git config --global user.email xxx
 
 # FastApiFile
 create virtual enviroment:
